@@ -10,7 +10,7 @@ import { arbeitsart, machtMit, ortText, person, satz, satzName, teilnahmenVon } 
 import { seit, uhrzeit, wochentag } from '../lib/format.ts'
 import { Chip, Leerstelle } from '../teile/Bausteine.tsx'
 import { auftragDauer } from '../lib/rechnen.ts'
-import { ZArbeit, ZPlus } from '../teile/Zeichen.tsx'
+import { ZArbeit, ZPlus, ZWeiter } from '../teile/Zeichen.tsx'
 
 export default function Start() {
   const d = useDaten()
@@ -120,8 +120,9 @@ export default function Start() {
           </div>
         )}
         {!dabei && (
-          <div className="knopf klein" style={{ marginTop: 12 }}>
-            {liegengeblieben ? 'Ansehen →' : 'Beitreten →'}
+          <div className={`knopf klein ${liegengeblieben ? '' : 'haupt'}`} style={{ marginTop: 13 }}>
+            {liegengeblieben ? 'Ansehen' : 'Beitreten'}
+            <ZWeiter width="15" height="15" />
           </div>
         )}
       </Link>

@@ -30,14 +30,14 @@ export default function App() {
   return (
     <div className="rahmen">
       <div className="demoband">
-        <span>Demo mit erfundenen Daten — nichts davon verlässt diesen Browser.</span>
+        <span><strong>Demo</strong> — erfundene Daten, nur in diesem Browser.</span>
         <button onClick={() => { zuruecksetzen(); ichSetzen(null) }}>zurücksetzen</button>
       </div>
 
       <header className="kopf">
         <div className="kopf-inhalt">
-          <NavLink to={imBuero ? '/buero' : '/feld'} className="marke" style={{ textDecoration: 'none' }}>
-            Feld<span>stunden</span>
+          <NavLink to={imBuero ? '/buero' : '/feld'} className="marke">
+            Feld<i>stunden</i>
           </NavLink>
 
           <nav className="reiter wachsen">
@@ -46,26 +46,25 @@ export default function App() {
                 <NavLink to="/buero" end className={({ isActive }) => isActive ? 'aktiv' : ''}>Dashboard</NavLink>
                 <NavLink to="/buero/archiv" className={({ isActive }) => isActive ? 'aktiv' : ''}>Archiv</NavLink>
                 <NavLink to="/buero/nachtrag" className={({ isActive }) => isActive ? 'aktiv' : ''}>
-                  Nachtragen{offen > 0 && ` (${offen})`}
+                  Nachtragen{offen > 0 && <span className="zaehler">{offen}</span>}
                 </NavLink>
                 <NavLink to="/buero/einstellungen" className={({ isActive }) => isActive ? 'aktiv' : ''}>
                   Einstellungen
                 </NavLink>
               </>
             ) : (
-              ich && (
-                <span className="leise" style={{ paddingLeft: 4 }}>
-                  {person(d, ich)?.name}
-                </span>
-              )
+              ich && <span className="leise" style={{ paddingLeft: 2 }}>{person(d, ich)?.name}</span>
             )}
           </nav>
 
-          <NavLink to={imBuero ? '/feld' : '/buero'} className="knopf klein" style={{ whiteSpace: 'nowrap' }}>
-            {imBuero
-              ? <><ZFeld width="15" height="15" /> Feld</>
-              : <><ZListe width="15" height="15" /> Büro</>}
-          </NavLink>
+          <div className="schalter">
+            <NavLink to="/feld" className={!imBuero ? 'aktiv' : ''}>
+              <ZFeld width="15" height="15" /> Feld
+            </NavLink>
+            <NavLink to="/buero" className={imBuero ? 'aktiv' : ''}>
+              <ZListe width="15" height="15" /> Büro
+            </NavLink>
+          </div>
         </div>
       </header>
 

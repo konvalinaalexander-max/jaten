@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "test": "node --test test/*.test.ts",
-    "pruefen": "npm run typecheck && npm test && npm run build"
+    "pruefen": "npm run typecheck && npm test && npm run build:datei",
+    "build:datei": "npm run build && node werkzeug/einedatei.mjs",
+    "schriften": "node werkzeug/schriften.mjs"
   },
   "dependencies": {
     "react": "^19.3.0",

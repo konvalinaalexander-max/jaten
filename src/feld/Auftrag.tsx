@@ -12,7 +12,7 @@ import { arbeitsart, machtMit, person, satz, satzName, schiffName } from '../lib
 import { auftragStunden, teilnahmeStunden } from '../lib/rechnen.ts'
 import { seit, stunden, uhrzeit } from '../lib/format.ts'
 import { Chip, Hinweis } from '../teile/Bausteine.tsx'
-import { ZArbeit, ZHaken, ZPlus, ZZurueck } from '../teile/Zeichen.tsx'
+import { ZArbeit, ZHaken, ZPlus, ZWeiter, ZZurueck } from '../teile/Zeichen.tsx'
 
 export default function Auftrag() {
   const { id = '' } = useParams()
@@ -148,7 +148,8 @@ export default function Auftrag() {
                     key={sid} className="wahl"
                     onClick={() => { schiffAnhaengen(a.id, sid); setSchiffeOffen(false) }}
                   >
-                    <span className="wahl-haupt">{schiffName(d, sid)}</span>
+                    <span className="wahl-haupt wachsen">{schiffName(d, sid)}</span>
+                    <ZWeiter className="pfeil" width="18" height="18" />
                   </button>
                 ))}
               </>

@@ -122,8 +122,19 @@ Das ist die Startseite der Feld-Oberfläche geworden: *Was läuft*, über alle
 Felder, mit den eigenen Aufträgen oben. Kein Passwort, kein PIN — beim ersten
 Öffnen einmal den Namen antippen, das Gerät merkt ihn sich lokal.
 
-Angetippt, nicht getippt: Freitext gäbe „Ana", „ana", „Anna" und damit drei
-Personen in der Auswertung.
+**Der Name wird eingetippt**, nicht aus einer Liste gewählt — es soll keine
+gepflegte Belegschaftsliste brauchen, damit jemand anfangen kann. Das Risiko
+dabei ist, dass „Marek" und „Mark" als zwei Personen in der Auswertung stehen
+und es niemandem auffällt. Dagegen zwei Dinge:
+
+- Verglichen wird ohne Rücksicht auf Gross- und Kleinschreibung und auf
+  doppelte Leerzeichen; „ana" landet bei „Ana".
+- Wer etwas tippt, das einem schon erfassten Namen ähnelt, bekommt ihn
+  angeboten: *Meintest du … Marek?* Ein Tipp, und die Stunden hängen an der
+  richtigen Person.
+
+Die Personenliste wächst also dadurch, dass Leute ihren Namen eintippen — so,
+wie es auf dem Betrieb ohnehin läuft.
 
 ## Stundensatz in den Einstellungen
 

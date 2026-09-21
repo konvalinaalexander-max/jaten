@@ -218,3 +218,52 @@ export function arbeitsartEntfernen(id: Id) {
     d.arbeitsarten = d.arbeitsarten.filter(a => a.id !== id)
   })
 }
+
+/**
+ * Namen wird eingetippt, nicht ausgewaehlt. Damit daraus nicht „Ana", „ana"
+ * und „ANA" drei Personen in der Auswertung werden, wird verglichen ohne
+ * Ruecksicht auf Gross- und Kleinschreibung und auf doppelte Leerzeichen;
+ * gespeichert wird die Schreibweise, die der erste getippt hat.
+ */
+export function namenNormalisieren(roh: string): string {
+  return roh.trim().replace(/\s+/g, ' ')
+}
+
+const vergleichbar = (n: string) =>
+  namenNormalisieren(n).toLocaleLowerCase('de-CH')
+
+export function personSuchen(d: Daten, name: string): Id | null {
+  const gesucht = vergleichbar(name)
+  if (!gesucht) return null
+  return d.personen.find(p => vergleichbar(p.name) === gesucht)?.id ?? null
+}
+
+/** Findet die Person oder legt sie an. Gibt die Id zurueck. */
+export function personAnlegenOderFinden(name: string): Id | null {
+  const sauber = namenNormalisieren(name)
+  if (!sauber) return null
+
+  const vorhanden = personSuchen(daten, sauber)
+  if (vorhanden) return vorhanden
+
+  const id = neueId('p')
+  aendern(d => { d.personen.push({ id, name: sauber, aktiv: true }) })
+  return id
+}
+
+/**
+ * Namen, die dem Getippten aehneln — damit „Mark" den vorhandenen „Marek"
+ * anbietet, statt still eine zweite Person anzulegen.
+ */
+export function aehnlicheNamen(d: Daten, eingabe: string, hoechstens = 4): string[] {
+  const roh = vergleichbar(eingabe)
+  if (roh.length < 2) return []
+  return d.personen
+    .filter(p => p.aktiv)
+    .map(p => p.name)
+    .filter(n => {
+      const v = vergleichbar(n)
+      return v !== roh && (v.startsWith(roh) || roh.startsWith(v) || v.includes(roh))
+    })
+    .slice(0, hoechstens)
+}

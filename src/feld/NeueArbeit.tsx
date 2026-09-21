@@ -14,7 +14,7 @@ import { feld, satzName, schiffeVon } from '../lib/finden.ts'
 import { datum, heute, kalenderwoche } from '../lib/format.ts'
 import type { Id, Satz } from '../lib/typen.ts'
 import { Hinweis, Schritte } from '../teile/Bausteine.tsx'
-import { ZArbeit, ZZurueck } from '../teile/Zeichen.tsx'
+import { ZArbeit, ZWeiter, ZZurueck } from '../teile/Zeichen.tsx'
 
 type Schritt = 'wo' | 'was' | 'anlegen' | 'arbeit' | 'wieviele'
 
@@ -112,6 +112,7 @@ export default function NeueArbeit() {
                         {' · '}{s.flaecheM2} m²
                       </div>
                     </div>
+                    <ZWeiter className="pfeil" width="18" height="18" />
                   </button>
                 )
               })}
@@ -144,6 +145,7 @@ export default function NeueArbeit() {
                   {s.herkunft === 'gesaet' ? 'gesät' : 'gepflanzt'} am {datum(s.startDatum)}
                 </div>
               </div>
+              <ZWeiter className="pfeil" width="18" height="18" />
             </button>
           ))}
           <button className="knopf voll" onClick={() => setSchritt('anlegen')}>
@@ -259,8 +261,9 @@ export default function NeueArbeit() {
               className="wahl"
               onClick={() => { setArbeitsartId(a.id); setSchritt('wieviele') }}
             >
-              <ZArbeit art={a.zeichen} width="28" height="28" style={{ color: 'var(--akzent)', flex: 'none' }} />
-              <span className="wahl-haupt">{a.name}</span>
+              <ZArbeit art={a.zeichen} width="27" height="27" style={{ color: 'var(--akzent)', flex: 'none' }} />
+              <span className="wahl-haupt wachsen">{a.name}</span>
+              <ZWeiter className="pfeil" width="18" height="18" />
             </button>
           ))}
         </div>

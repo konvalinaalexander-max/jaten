@@ -100,6 +100,10 @@ export const ZZurueck = (p: P) => (
   <Grund {...p}><path d="M14.5 5.5 8 12l6.5 6.5" /></Grund>
 )
 
+export const ZWeiter = (p: P) => (
+  <Grund {...p}><path d="M9.5 5.5 16 12l-6.5 6.5" /></Grund>
+)
+
 export const ZPlus = (p: P) => (
   <Grund {...p}><path d="M12 5v14M5 12h14" /></Grund>
 )
