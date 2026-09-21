@@ -157,3 +157,106 @@ Konzept §4 bleibt trotzdem gültig, sobald es echt wird: Der Speicher liegt
 hinter `src/lib/db.ts` und sonst nirgends. Wird daraus Supabase, kommt die
 Offline-Warteschlange an genau dieser einen Stelle dazu — die Oberfläche merkt
 nichts davon.
+
+---
+
+# Runde 3 — QR-Code und Satz-Lebenszyklus
+
+Visualisiert in [`Feldstunden-Erfassung-am-Feld.pdf`](../werkzeug/pdf/) —
+gebaut mit `node werkzeug/pdf/bauen.mjs`.
+
+## Der QR-Code ersetzt die GPS-Anwesenheitserkennung
+
+**Entschieden:** „Wir können auch viel über QR-Codes arbeiten — beim Ankommen
+ans Feld scannen sie einen Code und tragen dort ihre Arbeit ein."
+
+Das ist der Befund der Runde: Der Scan beantwortet die Frage, für die das GPS
+gebaut worden wäre — und beantwortet sie besser. AUSBAU §6 hielt fest, dass GPS
+kein Schiff auflösen kann (Handy auf wenige Meter genau, Schiff 1,5–3 m breit);
+ein Scan ist exakt.
+
+Damit fällt weg: die native App mit laufendem Hintergrundstandort, der
+Akkuverbrauch, das Apple-Programm, ein Gerät je Person, die
+Datenschutz-Folgenabschätzung für laufende Ortung. Es bleibt eine Webseite und
+ein laminiertes Schild.
+
+**Ein Code je Feld, an der Zufahrt** — nicht je Schiff. Ein Pfosten an der
+Einfahrt bleibt stehen; ein Stab im Beet wird vom Vlies verdeckt, umgefahren
+oder eingeackert. Vier Felder heissen vier Schilder, achtzig Schiffe hiessen
+achtzig. Das Schiff kommt über einen Tipp aus der Belegung.
+
+Mindestens 10 × 10 cm, Fehlerkorrektur Stufe H (bis 30 % der Fläche darf
+zerstört sein), Feldname gross darunter. Und immer mit Rückfallweg: Code
+kaputt oder Kamera streikt → Feldliste zum Antippen. Der Scan ist die
+Abkürzung, nie die einzige Tür.
+
+**Eine Person eröffnet, die anderen scannen denselben Code und treten bei.**
+Die Anzahl wird trotzdem gefragt (Runde 2 bleibt gültig): Akku leer, Handy im
+Auto, gar kein Gerät — die Differenz zwischen bestätigter Zahl und
+eingegangenen Scans sind die Stunden, die sonst ersatzlos fehlen, und zwar
+immer in dieselbe Richtung.
+
+**Offen bleibt das Ende.** Ein Scan beweist, dass jemand da war, nicht dass er
+geblieben ist. Zweiter Scan beim Gehen oder Knopf in der App — Vorschlag:
+beide anbieten, einen davon bewerben, und was fehlt, fängt die Nachtragsliste.
+
+## Ein Satz endet mit der Bodenbearbeitung, nicht mit der Ernte
+
+**Problem:** „Es wird oft an mehreren Tagen geerntet — also ist nicht immer
+klar, wann die Kultur wirklich fertig ist."
+
+Richtig, und es gibt keinen Erntetag, an dem jemand sicher weiss, dass es der
+letzte war. Deshalb **drei Zustände statt zwei**:
+
+```
+wächst  ──erster Erntegang──▶  in Ernte  ──geräumt / Boden bearbeitet──▶  abgeräumt
+   └──────────Boden bearbeitet, ohne dass je geerntet wurde──────────▶  umgebrochen
+```
+
+- `wächst → in Ernte` passiert **automatisch** beim ersten Ernte-Auftrag.
+  Keine Entscheidung nötig.
+- `in Ernte` hält einfach an. Das Dashboard zeigt *in Ernte seit 08.09., 5
+  Gänge, 1'440 Stück* — das ist die ehrliche Auskunft.
+- `in Ernte → abgeräumt` löst die nächste Bodenbearbeitung aus. Ernte ist ein
+  Vorgang mit unklarem Schluss; Fräsen ist ein Ereignis, das sich nicht
+  rückgängig machen lässt.
+
+**Die Belegung endet am Tag der Bodenbearbeitung**, nicht beim letzten
+Erntegang. Die Tage dazwischen gehören dem alten Satz — die Fläche stand
+niemandem sonst zur Verfügung. Sonst bekommt der Satz zu wenig Standzeit und
+der Folgesatz zu viel.
+
+**Vorgeschlagen, nicht automatisch ausgeführt.** Ein stiller Wechsel auf
+falscher Grundlage zerstört Geschichte, und das ist der einzige Schaden in
+diesem System, der sich nicht reparieren lässt. Also fragt die App: *Auf
+Schiff 3 stand Kopfsalat KW31. Abgeräumt?* Ein Tipp — aber ein menschlicher.
+
+Wenn lange nichts passiert: nach drei Wochen ohne Erntegang **einmal** nachfragen.
+Kein automatischer Abschluss.
+
+## Die Erntemenge wird je Gang gezählt
+
+Folgt aus dem Mehrfachschnitt und löst den fehlenden Nenner nebenbei: Niemand
+muss sich am Ende eine Schlusszahl merken, die Summe ergibt sich.
+
+Und es zeigt etwas, das eine einzige Endzahl verschluckt hätte — am
+Beispielsatz aus dem PDF: der fünfte Gang bringt 60 Stück in 2 Stunden und
+kostet damit **1.07 je Stück allein an Ernte**, während ein Kopf im
+Durchschnitt insgesamt 1.00 kostet. Ob sich der Gang lohnt, hängt am
+Verkaufspreis — aber die Frage stellt sich überhaupt erst, wenn man je Gang
+zählt.
+
+Solange ein Satz `in Ernte` ist, sind seine Kosten je Stück **vorläufig** und
+müssen so gekennzeichnet werden. Sonst wird mit einer Zahl gerechnet, die sich
+noch bewegt.
+
+## Die Zurechnung an der Wende
+
+| Arbeit | gehört zu |
+|---|---|
+| Räumen — Vlies weg, Strünke raus | dem **alten** Satz |
+| Fräsen, Beet machen, düngen | dem **neuen** Satz |
+| Boden bearbeitet, kein neuer Satz benannt | Gemeinkosten |
+
+Merksatz: *Aufräumen zahlt der, der Dreck gemacht hat; Vorbereiten zahlt der,
+der kommt.*

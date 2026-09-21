@@ -6,6 +6,34 @@ der Ausbau zum Vollsystem aufwirft ([AUSBAU.md](AUSBAU.md)).
 
 ---
 
+## Neu aus Runde 3
+
+### R · Scan beim Gehen, oder Knopf in der App?
+
+Ein Scan beweist, dass jemand da war — nicht, dass er geblieben ist. Zweiter
+Scan am Pfosten ist symmetrisch und in einem Satz erklärt, aber wer direkt vom
+Feld heimfährt, kommt nicht mehr daran vorbei. Der Knopf funktioniert überall,
+braucht aber ein Gerät je Person.
+
+*Vorschlag: beide anbieten, einen davon bewerben.* Welchen, entscheidet ihr.
+
+### S · Wie wird die Pause abgezogen?
+
+Das System kennt bisher keine. Bei 7 bis 11 Uhr mit Znüni sind die Stunden bei
+**jedem** Auftrag zu hoch, immer in dieselbe Richtung — und damit auch der
+Kulturvergleich.
+
+*Vorschlag: pauschal ab einer bestimmten Dauer.* Braucht keine Disziplin und
+ist besser als nichts.
+
+### T · Wer pflegt die Belegung?
+
+Die Fortschreibung über die nächste Arbeit nimmt fast alles ab, aber jemand
+muss die Vorschläge bestätigen und das Dashboard einmal die Woche anschauen.
+Ohne das stimmt nach einem Monat nicht mehr, was wo steht.
+
+---
+
 ## Zum Ausbau — diese blockieren den Entwurf
 
 ### A · Firmenhandys oder private Handys?

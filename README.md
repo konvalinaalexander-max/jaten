@@ -43,6 +43,7 @@ richtig, für den Betrieb nicht: zwei Handys sehen einander nicht. Dafür käme
 | [`docs/KONZEPT.md`](docs/KONZEPT.md) | Was das Projekt ist, wo die schwierigen Stellen liegen, Datenmodell, Vorgehen |
 | [`docs/ENTSCHEIDUNGEN.md`](docs/ENTSCHEIDUNGEN.md) | Was entschieden wurde und warum — inkl. der Abweichungen vom Konzept |
 | [`docs/AUSBAU.md`](docs/AUSBAU.md) | Ausbau zum Vollsystem: laufende Erfassung, Fahrzeiten, native App, Recht |
+| `werkzeug/pdf/` | 10-seitiges PDF mit Mockups und Diagrammen — `node werkzeug/pdf/bauen.mjs` |
 | [`docs/FRAGEN.md`](docs/FRAGEN.md) | Was noch offen ist |
 
 ## Die drei Punkte, auf die es ankommt

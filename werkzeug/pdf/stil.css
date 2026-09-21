@@ -1,0 +1,138 @@
+@import url('../../src/schrift/schriften.css');
+
+:root{
+  --papier:#FFFFFF; --ton:#F5F4EE; --ton2:#EDEBE2;
+  --tinte:#22251E; --leise:#5E6255; --still:#8E9184;
+  --linie:#DEDCD1; --linie2:#C4C2B4;
+  --akzent:#7E2D4A; --akzent-weich:#F6EAEF;
+  --balken:#8E3356;
+  --gruen:#1baf7a; --blau:#2a78d6; --orange:#eb6834; --gelb:#eda100;
+  --s-text:'IBM Plex Sans',sans-serif; --s-titel:'Literata',Georgia,serif;
+  --s-zahl:'IBM Plex Mono',monospace;
+}
+@page{ size:A4; margin:0 }
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0; background:var(--papier); color:var(--tinte);
+  font-family:var(--s-text); font-size:9.6pt; line-height:1.5;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact }
+
+.seite{ width:210mm; height:297mm; padding:16mm 17mm 13mm; position:relative;
+  page-break-after:always; overflow:hidden; display:flex; flex-direction:column }
+.seite:last-child{ page-break-after:auto }
+.fuss{ position:absolute; left:17mm; right:17mm; bottom:7mm;
+  display:flex; justify-content:space-between; align-items:baseline;
+  font-size:7pt; color:var(--still); letter-spacing:.04em;
+  border-top:.5pt solid var(--linie); padding-top:2mm }
+.fuss .nr{ font-family:var(--s-zahl) }
+
+h1{ font-family:var(--s-titel); font-weight:600; font-size:25pt; line-height:1.1;
+  letter-spacing:-.02em; margin:0 }
+h2{ font-family:var(--s-titel); font-weight:600; font-size:15pt; line-height:1.18;
+  letter-spacing:-.015em; margin:0 0 1.5mm }
+h3{ font-family:var(--s-text); font-weight:600; font-size:10pt; margin:0 0 1mm }
+p{ margin:0 0 2.6mm } p:last-child{ margin-bottom:0 }
+strong{ font-weight:600 }
+.eyebrow{ font-size:7pt; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--still); margin:0 0 1.5mm }
+.lead{ font-size:11pt; line-height:1.45; color:var(--leise) }
+.klein{ font-size:8.2pt; color:var(--leise); line-height:1.45 }
+.mini{ font-size:7.4pt; color:var(--still); line-height:1.4 }
+.zahl{ font-family:var(--s-zahl); font-variant-numeric:tabular-nums }
+.kopfzeile{ display:flex; justify-content:space-between; align-items:baseline;
+  border-bottom:1.2pt solid var(--tinte); padding-bottom:2mm; margin-bottom:5mm }
+.kopfzeile .marke{ font-family:var(--s-titel); font-weight:600; font-size:8.5pt }
+.kopfzeile .marke i{ font-style:normal; color:var(--akzent) }
+
+.kasten{ border:.6pt solid var(--linie2); border-radius:2.4mm; padding:4mm 4.5mm; background:var(--papier) }
+.kasten.ton{ background:var(--ton); border-color:var(--linie) }
+.kasten.akzent{ background:var(--akzent-weich); border-color:#E3C3D0 }
+.kasten.stark{ background:var(--tinte); color:#F4F3EE; border-color:var(--tinte) }
+.kasten.stark .eyebrow{ color:#9FA394 }
+.merksatz{ font-family:var(--s-titel); font-size:12pt; line-height:1.3; font-weight:600;
+  letter-spacing:-.01em }
+
+.zwei{ display:grid; grid-template-columns:1fr 1fr; gap:5mm }
+.drei{ display:grid; grid-template-columns:repeat(3,1fr); gap:4mm }
+.wachs{ flex:1 1 auto; min-height:0 }
+.reihe{ display:flex; gap:4mm; align-items:flex-start }
+
+figure{ margin:0 }
+figcaption{ font-size:7.4pt; color:var(--still); line-height:1.4; margin-top:2mm;
+  border-top:.5pt solid var(--linie); padding-top:1.5mm }
+svg{ display:block; max-width:100%; height:auto }
+
+table.w{ width:100%; border-collapse:collapse; font-size:8.2pt }
+table.w th{ text-align:left; font-size:6.8pt; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--still); font-weight:600; padding:0 2mm 1.2mm 0; border-bottom:.5pt solid var(--linie2) }
+table.w td .mini{ display:block }
+table.w td{ padding:1.4mm 2mm 1.4mm 0; border-bottom:.5pt solid var(--linie); vertical-align:top }
+table.w td.r,table.w th.r{ text-align:right; padding-right:0; padding-left:2.5mm }
+table.w td.z{ font-family:var(--s-zahl); font-variant-numeric:tabular-nums; white-space:nowrap }
+table.w tr:last-child td{ border-bottom:0 }
+
+ul.liste{ margin:0; padding:0; list-style:none }
+ul.liste li{ position:relative; padding-left:5mm; margin-bottom:1.8mm; line-height:1.45 }
+ul.liste li:last-child{ margin-bottom:0 }
+ul.liste li::before{ content:''; position:absolute; left:0; top:1.55mm;
+  width:2mm; height:2mm; border-radius:50%; background:var(--akzent) }
+ul.liste.haken li::before{ background:var(--gruen) }
+ul.liste.kreuz li::before{ background:none; border:.8pt solid var(--still) }
+
+.marke-nr{ font-family:var(--s-zahl); font-size:7pt; font-weight:500; color:var(--akzent);
+  border:.6pt solid #E3C3D0; background:var(--akzent-weich);
+  border-radius:1mm; padding:.3mm 1.4mm; letter-spacing:.02em }
+
+/* ——— Handy-Attrappen: die echte Oberfläche, verkleinert ——— */
+.attrappen{ display:flex; gap:2.5mm; align-items:stretch }
+.spur{ display:flex; flex-direction:column; align-items:center; gap:1.6mm }
+.pfeil-h{ align-self:center; color:var(--still); flex:none; padding-top:14mm }
+.attrappe{ width:55mm }
+.attrappe .rahmen{ width:55mm; height:97mm; border:.8pt solid var(--linie2);
+  border-radius:4mm; overflow:hidden; background:var(--ton); position:relative }
+.attrappe .schirm{ width:320px; height:568px; transform:scale(.6497); transform-origin:top left;
+  background:#F4F3ED; font-size:15px; line-height:1.5; color:#22251E; padding:0 }
+.bu{ font-size:7.2pt; color:var(--leise); line-height:1.35; text-align:center;
+  padding:0 1mm }
+.bu b{ color:var(--tinte); font-weight:600; display:block; font-size:7.6pt }
+
+/* Innenleben der Attrappe, in Gerätepixeln */
+.sk{ padding:14px 16px; display:flex; flex-direction:column; gap:14px }
+.sk-kopf{ display:flex; align-items:center; justify-content:space-between;
+  padding:9px 16px; border-bottom:1px solid #E3E1D7; background:#F7F6F1 }
+.sk-marke{ font-family:var(--s-titel); font-weight:600; font-size:14px }
+.sk-marke i{ font-style:normal; color:#7E2D4A }
+.sk-eyebrow{ font-size:10px; font-weight:600; letter-spacing:.11em; text-transform:uppercase; color:#989B8D }
+.sk-h1{ font-family:var(--s-titel); font-weight:600; font-size:23px; letter-spacing:-.015em; line-height:1.15 }
+.sk-leise{ color:#676B5E; font-size:13px; line-height:1.4 }
+.sk-karte{ background:#fff; border:1px solid #E3E1D7; border-radius:13px; padding:13px 14px }
+.sk-karte.streif{ border-left:3px solid #2C6749 }
+.sk-karte.streif-o{ border-left:3px solid #8A6212 }
+.sk-wahl{ background:#fff; border:1px solid #E3E1D7; border-radius:13px; padding:12px 13px;
+  display:flex; align-items:center; gap:11px }
+.sk-wahl.an{ border-color:#7E2D4A; background:#F4E8EC }
+.sk-haupt{ font-weight:600; font-size:15px; letter-spacing:-.005em }
+.sk-neben{ font-size:12px; color:#676B5E; margin-top:1px }
+.sk-knopf{ background:#22251E; color:#F7F6F1; border-radius:13px; padding:15px;
+  text-align:center; font-weight:600; font-size:16px }
+.sk-knopf.hell{ background:#fff; color:#22251E; border:1px solid #C4C2B4; font-weight:500; font-size:14px; padding:11px }
+.sk-chip{ display:inline-block; background:#E2EDE6; color:#2C6749; border-radius:99px;
+  padding:3px 9px; font-size:11px; font-weight:600 }
+.sk-chip.o{ background:#F6EEDC; color:#8A6212 }
+.sk-chip.g{ background:#EBE9E0; color:#676B5E }
+.sk-treppe{ display:grid; grid-template-columns:repeat(4,1fr); gap:7px }
+.sk-treppe div{ border:1px solid #C4C2B4; border-radius:10px; text-align:center;
+  padding:11px 0; font-family:var(--s-zahl); font-size:17px; background:#fff }
+.sk-treppe div.an{ background:#22251E; color:#F7F6F1; border-color:#22251E }
+.sk-kennz{ display:flex; border:1px solid #E3E1D7; border-radius:13px; background:#fff; overflow:hidden }
+.sk-kennz div{ flex:1; padding:11px 12px; border-left:1px solid #E3E1D7 }
+.sk-kennz div:first-child{ border-left:0 }
+.sk-kennz b{ font-family:var(--s-zahl); font-size:18px; font-weight:500; letter-spacing:-.03em; display:block }
+.sk-kennz span{ font-size:11px; color:#676B5E }
+.sk-zeile{ display:flex; justify-content:space-between; font-size:13px; padding:7px 0;
+  border-top:1px solid #E3E1D7 }
+.sk-kamera{ background:#2A2D26; height:100%; display:flex; align-items:center;
+  justify-content:center; position:relative }
+.sk-sucher{ width:150px; height:150px; border:3px solid rgba(255,255,255,.85); border-radius:14px;
+  display:flex; align-items:center; justify-content:center }
+.sk-kamera .hint{ position:absolute; bottom:34px; left:0; right:0; text-align:center;
+  color:#fff; font-size:14px; font-weight:500 }
