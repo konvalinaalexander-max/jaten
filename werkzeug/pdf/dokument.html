@@ -75,9 +75,9 @@
   <div class="zwei" style="margin-top:auto; padding-bottom:4mm">
     <div class="kasten akzent">
       <p class="eyebrow" style="color:#A8657F">Neu in dieser Runde &nbsp;1</p>
-      <h3>Der QR-Code ersetzt die GPS-Anwesenheit</h3>
-      <p class="klein" style="color:#6B3248">Damit fällt der schwerste Teil des Vorhabens weg: die native App mit
-      laufendem Hintergrundstandort. Seiten 2 bis 5.</p>
+      <h3>Scan und Standort teilen sich die Arbeit</h3>
+      <p class="klein" style="color:#6B3248">Der Scan erklärt die Arbeit, der Standort bestätigt die Anwesenheit — und
+      zeigt, was dazwischen passiert. Seiten 2 bis 5 und 9.</p>
     </div>
     <div class="kasten akzent">
       <p class="eyebrow" style="color:#A8657F">Neu in dieser Runde &nbsp;2</p>
@@ -94,96 +94,110 @@
 <section class="seite">
   <div class="kopfzeile">
     <span class="marke">Feld<i>stunden</i></span>
-    <span class="mini">Der QR-Code</span>
+    <span class="mini">Scan und Standort</span>
   </div>
 
-  <p class="eyebrow">Der Befund dieser Runde</p>
-  <h2>Der QR-Code nimmt dem Projekt seinen schwersten Teil</h2>
-  <p class="lead" style="max-width:160mm">
-    Die GPS-Anwesenheitserkennung sollte beantworten: <em>wer steht gerade
-    an diesem Schiff?</em> Sie kann es gar nicht — und ein Scan kann es exakt.
+  <p class="eyebrow">Die Arbeitsteilung</p>
+  <h2>Der Scan sagt, woran gearbeitet wird — der Standort, wer dabei ist</h2>
+  <p class="lead" style="max-width:162mm">
+    Die beiden sind keine Alternativen. Jedes beantwortet die Frage, die das
+    andere schlecht beantwortet.
   </p>
 
   <figure style="margin-top:6mm">
-    <svg viewBox="0 0 620 250" role="img" aria-label="Oben: über GPS kommt nur das Feld an, das Schiff bleibt offen und muss erfragt werden. Unten: ein Scan liefert Feld und Schiff exakt.">
+    <svg viewBox="0 0 620 178" role="img" aria-label="Der QR-Scan des Vorarbeiters liefert Schiff, Arbeit und Satz; der Standortabgleich auf dem Gerät liefert je Person nur den Zustand am Schiff, unterwegs oder am Hof. Beides zusammen ergibt, wer wie lange an welcher Arbeit war.">
       <defs>
         <marker id="p2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
         </marker>
       </defs>
       <g font-family="IBM Plex Sans" fill="currentColor">
-        <!-- Bahn A -->
-        <text x="0" y="14" font-size="10.5" font-weight="600" letter-spacing="1.4">ÜBER GPS</text>
-        <rect x="0" y="26" width="96" height="42" rx="6" fill="#F5F4EE" stroke="#C4C2B4"/>
-        <text x="48" y="44" text-anchor="middle" font-size="12" font-weight="600">Handy</text>
-        <text x="48" y="59" text-anchor="middle" font-size="10" fill="#5E6255">im Hintergrund</text>
+        <!-- Bahn A: Scan -->
+        <text x="0" y="14" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#7E2D4A">EIN SCAN, VOM VORARBEITER</text>
+        <rect x="0" y="24" width="126" height="46" rx="6" fill="#F5F4EE" stroke="#C4C2B4"/>
+        <text x="63" y="43" text-anchor="middle" font-size="12" font-weight="600">Code am Pfosten</text>
+        <text x="63" y="59" text-anchor="middle" font-size="10" fill="#5E6255">plus zwei Tipps</text>
+        <line x1="126" y1="47" x2="204" y2="47" stroke="#7E2D4A" stroke-width="1.6" marker-end="url(#p2)" color="#7E2D4A"/>
+        <rect x="206" y="24" width="220" height="46" rx="6" fill="#F6EAEF" stroke="#E3C3D0"/>
+        <text x="316" y="43" text-anchor="middle" font-size="12" font-weight="600" fill="#7E2D4A">Schiff 3 · Hacken · Kopfsalat KW31</text>
+        <text x="316" y="59" text-anchor="middle" font-size="10" fill="#7E2D4A">exakt — weil ein Mensch es erklärt</text>
 
-        <line x1="96" y1="47" x2="184" y2="47" stroke="currentColor" stroke-width="1.4" marker-end="url(#p2)"/>
-        <text x="140" y="40" text-anchor="middle" font-size="9.5" fill="#5E6255">Position, alle 2 min</text>
-        <text x="140" y="62" text-anchor="middle" font-size="9.5" fill="#8E9184">Akku · Berechtigung · App</text>
+        <!-- Bahn B: Standort -->
+        <text x="0" y="110" font-size="10.5" font-weight="600" letter-spacing="1.4">EIN ABGLEICH, AUF JEDEM GERÄT</text>
+        <rect x="0" y="120" width="126" height="46" rx="6" fill="#F5F4EE" stroke="#C4C2B4"/>
+        <text x="63" y="139" text-anchor="middle" font-size="12" font-weight="600">Standort</text>
+        <text x="63" y="155" text-anchor="middle" font-size="10" fill="#5E6255">bleibt auf dem Handy</text>
+        <line x1="126" y1="143" x2="204" y2="143" stroke="currentColor" stroke-width="1.4" marker-end="url(#p2)"/>
+        <text x="165" y="136" text-anchor="middle" font-size="9" fill="#8E9184">nur das</text>
+        <text x="165" y="158" text-anchor="middle" font-size="9" fill="#8E9184">Ergebnis</text>
+        <rect x="206" y="120" width="220" height="46" rx="6" fill="#E4E7DA" stroke="#9FB08C"/>
+        <text x="316" y="139" text-anchor="middle" font-size="12" font-weight="600" fill="#33472A">dort · unterwegs · am Hof</text>
+        <text x="316" y="155" text-anchor="middle" font-size="10" fill="#33472A">ein Wort, keine Koordinate</text>
 
-        <rect x="186" y="26" width="120" height="42" rx="6" fill="#F5F4EE" stroke="#C4C2B4"/>
-        <text x="246" y="44" text-anchor="middle" font-size="12" font-weight="600">Abgleich</text>
-        <text x="246" y="59" text-anchor="middle" font-size="10" fill="#5E6255">Feldumrisse</text>
+        <!-- Zusammenführung -->
+        <path d="M426 47 L470 47 L470 88" fill="none" stroke="#C4C2B4" stroke-width="1.4"/>
+        <path d="M426 143 L470 143 L470 102" fill="none" stroke="#C4C2B4" stroke-width="1.4"/>
+        <line x1="470" y1="95" x2="504" y2="95" stroke="currentColor" stroke-width="1.4" marker-end="url(#p2)"/>
+        <rect x="506" y="72" width="114" height="46" rx="6" fill="#22251E"/>
+        <text x="563" y="91" text-anchor="middle" font-size="11.5" font-weight="600" fill="#F4F3EE">Wer war wie lange</text>
+        <text x="563" y="107" text-anchor="middle" font-size="11.5" font-weight="600" fill="#F4F3EE">an welcher Arbeit</text>
 
-        <line x1="306" y1="47" x2="372" y2="47" stroke="currentColor" stroke-width="1.4" marker-end="url(#p2)"/>
-        <rect x="374" y="26" width="118" height="42" rx="6" fill="#E2EDE6" stroke="#9EC5AE"/>
-        <text x="433" y="44" text-anchor="middle" font-size="12" font-weight="600" fill="#1E5138">Feld: Bachacker</text>
-        <text x="433" y="59" text-anchor="middle" font-size="10" fill="#1E5138">sicher</text>
-
-        <line x1="492" y1="47" x2="536" y2="47" stroke="#8A6212" stroke-width="1.4" marker-end="url(#p2)" color="#8A6212"/>
-        <rect x="430" y="86" width="190" height="42" rx="6" fill="#F6EEDC" stroke="#DDBE85"/>
-        <text x="525" y="104" text-anchor="middle" font-size="12" font-weight="600" fill="#7A560F">Schiff: offen</text>
-        <text x="525" y="119" text-anchor="middle" font-size="10" fill="#7A560F">muss trotzdem gefragt werden</text>
-        <path d="M536 47 L602 47 L602 84" fill="none" stroke="#8A6212" stroke-width="1.4" marker-end="url(#p2)" color="#8A6212"/>
-
-        <text x="0" y="104" font-size="9.5" fill="#5E6255">Genauigkeit 3–10 m.</text>
-        <text x="0" y="118" font-size="9.5" fill="#5E6255">Ein Schiff ist 1,5–3 m breit.</text>
-        <text x="0" y="132" font-size="9.5" font-weight="600">Das ist Physik,</text>
-        <text x="0" y="146" font-size="9.5" font-weight="600">keine Umsetzungsfrage.</text>
-
-        <line x1="0" y1="164" x2="620" y2="164" stroke="#DEDCD1" stroke-width="1"/>
-
-        <!-- Bahn B -->
-        <text x="0" y="192" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#7E2D4A">ÜBER QR-CODE</text>
-        <rect x="0" y="204" width="96" height="42" rx="6" fill="#F5F4EE" stroke="#C4C2B4"/>
-        <text x="48" y="222" text-anchor="middle" font-size="12" font-weight="600">Handy</text>
-        <text x="48" y="237" text-anchor="middle" font-size="10" fill="#5E6255">Kamera, 3 Sekunden</text>
-
-        <line x1="96" y1="225" x2="372" y2="225" stroke="#7E2D4A" stroke-width="1.6" marker-end="url(#p2)" color="#7E2D4A"/>
-        <text x="234" y="218" text-anchor="middle" font-size="9.5" fill="#7E2D4A">ein Scan — kein Hintergrund, kein Akku, keine Berechtigung</text>
-
-        <rect x="374" y="204" width="246" height="42" rx="6" fill="#F6EAEF" stroke="#E3C3D0"/>
-        <text x="497" y="222" text-anchor="middle" font-size="12" font-weight="600" fill="#7E2D4A">Hausfeld · Schiff 3</text>
-        <text x="497" y="237" text-anchor="middle" font-size="10" fill="#7E2D4A">exakt, ohne Rückfrage</text>
       </g>
     </svg>
-    <figcaption>Der Scan liefert genau die Auskunft, für die das GPS gebaut worden wäre — und liefert sie besser.</figcaption>
+    <figcaption>Der Scan ersetzt das Tippen, der Standort das Beitreten — und beantwortet nebenbei, was zwischen den Arbeiten passiert. Der Vorarbeiter erklärt einmal, woran gearbeitet wird; die Geräte der anderen bestätigen von selbst, dass sie dabei sind.</figcaption>
   </figure>
 
-  <div class="kasten ton" style="margin-top:6mm">
-    <table class="w">
-      <thead><tr><th style="width:34%"></th><th style="width:33%">Weg über GPS</th><th style="width:33%">Weg über QR-Code</th></tr></thead>
-      <tbody>
-        <tr><td>Braucht</td><td>native App, Android und iOS</td><td>Webseite genügt</td></tr>
-        <tr><td>Geräte</td><td>eines je <em>Person</em>, den ganzen Tag geladen</td><td>eines je <em>Gruppe</em> reicht</td></tr>
-        <tr><td>Kosten</td><td>Apple-Programm, Firmenhandys, Pflege</td><td>laminierte Karten auf Pfosten</td></tr>
-        <tr><td>Gespeichert wird</td><td>laufender Aufenthalt, den ganzen Tag</td><td>einzelne Scans, vom Menschen ausgelöst</td></tr>
-        <tr><td>Rechtlich</td><td>Folgenabschätzung, Einwilligung, Ausstiegsweg</td><td>wie ein Stempel an der Stechuhr</td></tr>
-        <tr><td>Schiff-Zuordnung</td><td><strong style="color:#8A6212">unmöglich</strong> — muss erfragt werden</td><td><strong style="color:#1E5138">exakt</strong></td></tr>
-      </tbody>
-    </table>
+  <h3 style="margin-top:6mm">Was der Standort leisten muss — und was nicht</h3>
+  <div class="zwei" style="margin-top:3mm">
+    <div class="kasten ton">
+      <p class="eyebrow">Die Geometrie</p>
+      <p class="klein">Ein Schiff ist <strong>20 m breit</strong>, eine Linie 2 m. Ein Handy liegt
+      unter freiem Himmel auf <strong>3 bis 8 m</strong> genau, unter Bäumen und
+      neben Gebäuden deutlich schlechter.</p>
+      <p class="klein" style="margin-top:2mm">Damit liesse sich ein Schiff <em>meistens</em> treffen — aber man merkt
+      nie, wann man danebenliegt. Das muss der Standort auch gar nicht: Der
+      Vorarbeiter sagt das Schiff an.</p>
+    </div>
+    <div class="kasten ton">
+      <p class="eyebrow">Warum es trotzdem sicher ist</p>
+      <p class="klein">Gefragt ist nicht <em>wo genau</em>, sondern <em>ist die Person bei der
+      Gruppe</em>. Das ist eine Abstandsfrage, und Abstände sind genauer als
+      Einzelpositionen: Zwei Handys nebeneinander sehen dieselben Satelliten und
+      machen denselben Fehler — der kürzt sich heraus.</p>
+      <p class="klein" style="margin-top:2mm">Dazu: <strong>nie zwei Gruppen auf demselben Feld</strong>, und die Felder
+      liegen weit auseinander. Die Verwechslungsmöglichkeiten fallen damit weg.</p>
+    </div>
   </div>
 
-  <div class="kasten stark" style="margin-top:auto; margin-bottom:4mm">
-    <p class="merksatz" style="margin:0">Der QR-Code ist die bessere Antwort auf dieselbe Frage — und er kostet
-      einen Bruchteil.</p>
-    <p class="klein" style="color:#B9BCAE; margin-top:2mm">Vom Vollsystem bleibt genau zwei Dinge übrig, für die es keinen Ersatz
-      gibt: die Fahrzeit und die Restzeit. Beide brauchen keinen Standort. Seite 9.</p>
+  <div class="kasten" style="margin-top:6mm">
+    <p class="eyebrow">Und rechtlich?</p>
+    <p class="klein"><strong>Der Entwurf hilft erheblich, nimmt die Frage aber nicht weg.</strong>
+    „Person X war von 07:14 bis 11:30 am Bachacker“ ist auch ohne Koordinate
+    ein Personendatum — das Datenschutzgesetz gilt in vollem Umfang. Was der
+    Entwurf ändert, ist die Verhältnismässigkeit: Wer nur den Arbeitszustand
+    speichert statt einer Spur, hat das mildere Mittel <em>gebaut</em> statt es
+    nur zu versprechen. Und Arbeitszeit zu erfassen fällt unter die Durchführung
+    des Arbeitsvertrags (Art. 328b OR); eine Bewegungsspur nicht.</p>
+    <p class="klein" style="margin-top:2mm">Entscheidend ist aber der <strong>Zweck und der tatsächliche
+    Gebrauch</strong>, nicht nur die Bauweise: Sobald die Zahlen je Person
+    ausgewertet werden — Pünktlichkeit, Restzeit, Vergleich —, ist es ein
+    Verhaltensüberwachungssystem, egal was gespeichert ist. Ausführlich in
+    <code>docs/AUSBAU.md</code>, samt dem, was eine Fachperson prüfen muss.</p>
+  </div>
+
+  <div class="kasten akzent" style="margin-top:auto; margin-bottom:4mm">
+    <p class="eyebrow" style="color:#A8657F">Eine Zahl, die ich anders setzen würde</p>
+    <p class="klein" style="color:#6B3248">40 m <em>zwischen den Personen</em> ist zu eng: Eine Gruppe, die ein
+    100 m langes Schiff abarbeitet, zieht sich auseinander, ohne dass jemand
+    weggeht. Besser <strong>gegen einen festen Punkt je Feld</strong> prüfen —
+    einmal beim Montieren des Schilds gesetzt — mit einem Radius, der das Feld
+    plus Wendestreifen umfasst. Dann zählt nicht der Abstand untereinander,
+    sondern: ist die Person auf dem Feld, an dem gearbeitet wird.</p>
   </div>
 
   <div class="fuss"><span>Feldstunden · Erfassung am Feld</span><span class="nr">2 / 10</span></div>
 </section>
+
 <!-- ══════════ 3 ══════════ -->
 <section class="seite">
   <div class="kopfzeile"><span class="marke">Feld<i>stunden</i></span><span class="mini">Ablauf · eröffnen</span></div>
@@ -273,7 +287,7 @@
       Differenz zwischen bestätigter Zahl und eingegangenen Scans ist die Zahl
       der Leute, deren Stunden sonst <em>ersatzlos fehlen</em> würden — und zwar
       immer in dieselbe Richtung.</p>
-      <p class="klein" style="margin-top:2mm">Die App weist beides getrennt aus: <strong>gemessen</strong> aus Scans,
+      <p class="klein" style="margin-top:2mm">Die App weist beides getrennt aus: <strong>gemessen</strong>,
       <strong>ergänzt</strong> über die Differenz. Damit sieht eine Schätzung nie
       aus wie eine Messung.</p>
     </div>
@@ -865,26 +879,39 @@
     <figcaption>Wer nur Aufträge erfasst, erfährt, wie sich die <em>erklärte</em> Zeit verteilt — nicht, dass ein knappes Drittel des bezahlten Tages gar nicht darin vorkommt.</figcaption>
   </figure>
 
-  <div class="zwei" style="margin-top:6mm">
-    <div class="kasten ton">
-      <p class="eyebrow">Die Restzeit</p>
-      <h3>Kostet einen Knopf, keine App</h3>
-      <p class="klein">Bezahlte Zeit minus erklärte Zeit. Dafür braucht es nur <em>Dienst an</em>
-      am Morgen und <em>Dienst aus</em> am Abend — und die Summe der Scans, die
-      ihr ohnehin habt. Kein Standort, keine native App, kein Gutachten.</p>
-      <p class="klein" style="margin-top:2mm">Ihr seht dann <strong>wieviel</strong>, aber noch nicht <strong>was</strong>.
-      Ob sich die Aufteilung lohnt, wisst ihr erst, wenn ihr die Zahl einmal
-      gesehen habt. Deshalb steht sie in der Reihenfolge vor allem anderen.</p>
+  <h3 style="margin-top:6mm">Wie aus zwei Signalen eine Kategorie wird</h3>
+  <div class="reihe" style="margin-top:3mm">
+    <div style="flex:1 1 57%">
+      <table class="w">
+        <thead><tr><th style="width:36%">Zustand vom Gerät</th><th style="width:22%">im Fahrzeug?</th><th>ergibt</th></tr></thead>
+        <tbody>
+          <tr><td>auf dem Feld, Auftrag offen</td><td>nein</td><td><strong>Feldarbeit</strong> <span class="mini">auf den Satz gebucht</span></td></tr>
+          <tr><td>auf dem Feld, Auftrag offen</td><td>ja</td><td><strong>Maschinenarbeit</strong></td></tr>
+          <tr><td>auf dem Feld, kein Auftrag</td><td>nein</td><td><strong>Rüsten, Warten</strong> <span class="mini">am Feld</span></td></tr>
+          <tr><td>am Hof</td><td>nein</td><td><strong>Rüsten, Werkstatt, Lager</strong></td></tr>
+          <tr><td>beliebig</td><td>ja</td><td><strong>Fahrt</strong></td></tr>
+          <tr><td>anderswo</td><td>nein</td><td><strong>nicht zugeordnet</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="mini" style="margin-top:2mm"><em>anderswo</em> ist der ehrliche Eimer: Alles ausserhalb der Betriebsflächen
+      fällt zu einem einzigen Wort zusammen. Ob das der Arzt, die Landi oder das
+      eigene Zuhause ist, entsteht gar nicht erst als Datum.</p>
     </div>
-    <div class="kasten ton">
-      <p class="eyebrow">Die Fahrzeit</p>
-      <h3>Bewegung, nicht Position</h3>
-      <p class="klein">Das Betriebssystem meldet <em>steht / geht / im Fahrzeug</em> — ohne
-      Standort und fast ohne Akku. Nicht über Geschwindigkeit: ein Traktor beim
-      Hacken fährt 3–5 km/h, und das ist Arbeit.</p>
-      <p class="klein" style="margin-top:2mm">Zuordnung: <strong>Fahrt gehört zum nächsten Halt.</strong> Die Heimfahrt
-      zum letzten Feld. Eine Regel, die jeder im Kopf nachrechnet, wird
-      akzeptiert — eine genauere, die niemand nachvollzieht, nicht.</p>
+    <div style="flex:1 1 43%">
+      <div class="kasten ton">
+        <p class="eyebrow">Die Fahrzeit</p>
+        <p class="klein">Nicht über Geschwindigkeit: ein Traktor beim Hacken fährt 3–5 km/h, und
+        das ist Arbeit. Das Betriebssystem meldet <em>steht / geht / im
+        Fahrzeug</em> — ohne Standort und fast ohne Akku.</p>
+        <p class="klein" style="margin-top:2mm">Zuordnung: <strong>Fahrt gehört zum nächsten Halt</strong>, die Heimfahrt
+        zum letzten Feld.</p>
+      </div>
+      <div class="kasten ton" style="margin-top:3mm">
+        <p class="eyebrow">Speichern als Abschnitte, nicht als Messpunkte</p>
+        <p class="klein">Ein Eintrag <em>07:14–11:30 Bachacker, hacken</em> statt 130 Zeilen „ist am
+        Bachacker“. Für die Kostenrechnung dieselbe Auskunft — als Aufzeichnung
+        über eine Person etwas ganz anderes.</p>
+      </div>
     </div>
   </div>
 

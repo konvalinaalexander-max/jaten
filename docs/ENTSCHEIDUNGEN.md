@@ -170,15 +170,15 @@ gebaut mit `node werkzeug/pdf/bauen.mjs`.
 **Entschieden:** „Wir können auch viel über QR-Codes arbeiten — beim Ankommen
 ans Feld scannen sie einen Code und tragen dort ihre Arbeit ein."
 
-Das ist der Befund der Runde: Der Scan beantwortet die Frage, für die das GPS
-gebaut worden wäre — und beantwortet sie besser. AUSBAU §6 hielt fest, dass GPS
-kein Schiff auflösen kann (Handy auf wenige Meter genau, Schiff 1,5–3 m breit);
-ein Scan ist exakt.
+Der Scan liefert die Zuordnung zum Schiff zuverlässiger als jede Ortung — weil
+ein Mensch sie erklärt.
 
-Damit fällt weg: die native App mit laufendem Hintergrundstandort, der
-Akkuverbrauch, das Apple-Programm, ein Gerät je Person, die
-Datenschutz-Folgenabschätzung für laufende Ortung. Es bleibt eine Webseite und
-ein laminiertes Schild.
+> **Korrigiert in Runde 4:** Hier stand zuerst, GPS könne ein Schiff „gar
+> nicht“ auflösen. Das beruhte auf einer falschen Zahl (1,5–3 m statt der
+> tatsächlichen 20 m Schiffbreite). Die Zuordnung gehört trotzdem in die
+> Ansage, aber weil sie dort verlässlicher ist — nicht weil es unmöglich wäre.
+> Und der Standort kommt für eine andere Aufgabe zurück: siehe das Nachtragsteil
+> in [AUSBAU.md](AUSBAU.md).
 
 **Ein Code je Feld, an der Zufahrt** — nicht je Schiff. Ein Pfosten an der
 Einfahrt bleibt stehen; ein Stab im Beet wird vom Vlies verdeckt, umgefahren

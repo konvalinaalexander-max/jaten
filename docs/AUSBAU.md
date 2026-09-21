@@ -585,3 +585,182 @@ bekommt Zahlen, die falsch sind, ohne dass es jemand sehen kann.
 
 Alles in §4, §8 und §9 dient dieser einen Frage. Und die billigste Art, sie zu
 beantworten, ist, sie zu stellen — vor dem Bauen, den Leuten, die es betrifft.
+
+---
+
+# Nachtrag Runde 4 — Scan und Standort zusammen
+
+## Korrektur: die Schiffbreite
+
+In §6 stand, GPS könne „kein Schiff auflösen“, und das sei Physik. Die Zahl
+war falsch: Gerechnet war mit 1,5–3 m, weil ich *Schiff* mit *Beet*
+gleichgesetzt hatte. **Ein Schiff ist 20 m breit, eine Linie 2 m.**
+
+Damit stimmt die Schlussfolgerung nicht mehr in dieser Schärfe. Bei 3–8 m
+Genauigkeit unter freiem Himmel liesse sich ein 20-m-Schiff *meistens* treffen.
+Was bleibt: Man merkt nie, wann man danebenliegt, und unter Bäumen oder neben
+Gebäuden wird es deutlich schlechter. Die Zuordnung zum Schiff gehört deshalb
+weiterhin in die Ansage des Vorarbeiters — aber weil sie dort **zuverlässiger**
+ist, nicht weil der Standort es grundsätzlich nicht könnte.
+
+## Die Arbeitsteilung, die daraus folgt
+
+Der Scan und der Standort sind keine Alternativen:
+
+| | beantwortet | Genauigkeit |
+|---|---|---|
+| **QR-Scan** des Vorarbeiters | welches Schiff, welche Arbeit, welcher Satz | exakt — ein Mensch erklärt es |
+| **Standortabgleich** auf jedem Gerät | ist diese Person dabei; und was ist sie sonst | reicht mit grossem Abstand |
+
+Warum der zweite Teil sicher ist, obwohl 3–8 m nach wenig klingt:
+
+1. Gefragt ist nicht *wo genau*, sondern *ist die Person am Ort der Arbeit*.
+   Das ist eine Abstandsfrage — und Abstände sind genauer als Einzelpositionen,
+   weil zwei Geräte am selben Ort dieselben Satelliten sehen und denselben
+   Fehler machen. Der kürzt sich heraus.
+2. **Nie zwei Gruppen auf demselben Feld**, und die Felder liegen weit
+   auseinander. Die Verwechslungsmöglichkeiten fallen damit praktisch weg.
+
+**Zur 40-Meter-Zahl:** zwischen den *Personen* gemessen ist sie zu eng. Eine
+Gruppe, die ein 100 m langes Schiff abarbeitet, zieht sich auseinander, ohne
+dass jemand weggeht. Besser gegen einen **festen Punkt je Feld** prüfen —
+einmal beim Montieren des Schilds gesetzt — mit einem Radius, der das Feld plus
+Wendestreifen umfasst. Dann lautet die Frage: *ist die Person auf dem Feld, an
+dem gearbeitet wird.*
+
+Damit entfällt auch das Beitreten für alle, die ein Gerät dabeihaben. Der Scan
+bleibt als Rückfallweg: Akku war leer, kein Signal, jemand kommt später dazu.
+
+## Was der Standort zusätzlich leistet
+
+Das ist der eigentliche Grund, ihn doch zu nehmen — er trennt die Restzeit auf,
+was der Scan nie könnte:
+
+| Zustand vom Gerät | im Fahrzeug? | ergibt |
+|---|---|---|
+| auf dem Feld, Auftrag offen | nein | Feldarbeit, auf den Satz gebucht |
+| auf dem Feld, Auftrag offen | ja | Maschinenarbeit |
+| auf dem Feld, kein Auftrag | nein | Rüsten, Warten am Feld |
+| am Hof | nein | Rüsten, Werkstatt, Lager |
+| beliebig | ja | Fahrt |
+| anderswo | nein | nicht zugeordnet |
+
+*Auf dem Feld, aber kein Auftrag offen* ist dabei die interessanteste Zeile:
+Wartezeit am Feld ist vermutlich ein guter Teil der Restzeit, und sie zeigt
+Organisation, nicht Menschen.
+
+**Zwei Bauregeln, die das Ganze tragen:**
+
+- **Der Abgleich passiert auf dem Gerät.** Es kennt die Betriebsflächen (das
+  sind Betriebsdaten, keine Personendaten) und schickt nur das Ergebnis. Alles
+  ausserhalb fällt zu einem einzigen Wort zusammen: *anderswo*. Ob das der
+  Arzt, die Landi oder das eigene Zuhause ist, entsteht gar nicht erst.
+- **Gespeichert werden Abschnitte, nicht Messpunkte.** Ein Eintrag
+  `07:14–11:30 Bachacker, hacken` statt 130 Zeilen „ist am Bachacker“. Für die
+  Kostenrechnung dieselbe Auskunft — als Aufzeichnung über einen Menschen etwas
+  ganz anderes.
+
+## Die Rechtsfrage: „ist das erlaubt?“
+
+**Vorweg, und nicht als Floskel: Ich bin nicht eure Rechtsberatung.** Bei
+laufender Erfassung von Arbeitnehmern ist das der Bereich, in dem ein Fehler
+nicht heisst „bauen wir nächste Saison um“. Was hier steht, ist der
+Argumentationsrahmen, mit dem ihr zu einer Fachperson geht — nicht die Antwort.
+
+### Was der Entwurf ändert, und was nicht
+
+**Es bleibt ein Personendatum.** „Person X war von 07:14 bis 11:30 am
+Bachacker“ ist auch ohne Koordinate eine Aussage über einen bestimmten
+Menschen. Das DSG gilt damit vollständig: Zweckbindung, Verhältnismässigkeit,
+Erkennbarkeit, Richtigkeit, Datensicherheit, Bearbeitungsverzeichnis. Der
+Entwurf macht die Frage **nicht** gegenstandslos.
+
+**Er macht sie aber deutlich leichter zu beantworten.** Die
+Verhältnismässigkeitsprüfung fragt immer: Gibt es ein milderes Mittel, das den
+Zweck auch erreicht? Wer nur den Arbeitszustand speichert statt einer Spur, hat
+das mildere Mittel **gebaut**, statt es zu versprechen. Das ist der Unterschied
+zwischen einer Zusage, die man brechen kann, und einer Eigenschaft des Systems.
+
+**Art. 328b OR** ist der zentrale Hebel: Der Arbeitgeber darf nur Daten
+bearbeiten, die die Eignung betreffen oder **zur Durchführung des
+Arbeitsvertrags nötig** sind. Arbeitszeit samt zugehöriger Tätigkeit zu
+erfassen fällt darunter — das ist ein Stundenrapport. Eine Bewegungsspur
+fällt nicht darunter. Genau deshalb ist entscheidend, dass am Ende das eine in
+der Datenbank steht und nicht das andere.
+
+### Der Punkt, an dem es kippt
+
+**Der Zweck und der tatsächliche Gebrauch entscheiden, nicht allein die
+Bauweise.** Ein System, das Verhalten überwachen *soll*, ist unzulässig (in der
+Schweiz ausdrücklich Art. 26 ArGV 3, soweit er greift — siehe unten). Ein
+System, das Kosten rechnet und dabei zwangsläufig Zeiten erfasst, ist zulässig,
+wenn es verhältnismässig gebaut und verwendet wird.
+
+Was es kippen lässt, ganz konkret:
+
+- Restzeit **je Person** auswerten.
+- Ankunfts- und Weggehzeiten für Pünktlichkeit benutzen.
+- Irgendetwas davon in einem Gespräch über Leistung verwenden.
+- Eine Live-Ansicht „wo ist X gerade“.
+
+Passiert eines davon, ist es ein Verhaltensüberwachungssystem — unabhängig
+davon, was gespeichert ist. Umgekehrt: Wird nichts davon gemacht und ist das
+auch technisch nicht vorgesehen, trägt die Begründung.
+
+Deshalb gehört die Liste aus §9 („was der Betrieb bewusst nicht bekommt“) ins
+Programm und in die Information an die Leute — nicht in eine Richtlinie, die
+man ändern kann.
+
+### Was zusätzlich nötig ist
+
+- **Datenschutz-Folgenabschätzung** (Art. 22 DSG). Systematische Erfassung von
+  Arbeitnehmern ist ein Lehrbuchfall. Das ist keine Schikane: Sie erzwingt
+  genau diese Analyse und liefert die Begründung schriftlich.
+- **Information aller Betroffenen**, verständlich und in ihrer Sprache.
+- **Ein echter, folgenloser Ausstieg.** Wer nicht will, bekommt Papier oder
+  wird vom Vorarbeiter eingetragen — ohne Nachteil, ohne Gespräch. Ohne das ist
+  die Einwilligung keine, und im Arbeitsverhältnis gilt sie wegen des
+  Abhängigkeitsverhältnisses ohnehin als schwache Grundlage. Sie kommt
+  obendrauf, sie trägt nicht allein.
+- **Aufbewahrung begrenzen.** Zustandsabschnitte löschen, sobald der Tag
+  bestätigt und auf die Sätze gebucht ist. Was bleibt, sind Stunden je
+  Auftrag — kein Tagesverlauf.
+- **Die Rohspur auf dem Gerät muss eine Eigenschaft sein, keine Zusage.** Ein
+  rollender Puffer von sieben Tagen, nur für die Person selbst einsehbar, in
+  keinem Upload-Pfad, jederzeit löschbar. Steht es so in der Folgenabschätzung,
+  wäre eine spätere Version, die ihn doch hochlädt, ein dokumentierter Bruch
+  des erklärten Zwecks.
+
+### Was eine Fachperson prüfen muss
+
+1. **Gilt das Arbeitsgesetz bei euch?** Landwirtschaftliche Betriebe sind
+   weitgehend ausgenommen; dann greift der kantonale Normalarbeitsvertrag
+   Landwirtschaft. Daran hängt, ob **Art. 26 ArGV 3** formal anwendbar ist.
+   Auch wenn nicht: Aufsicht und Gerichte prüfen über Art. 328b OR und das DSG
+   nach demselben Massstab. Baut so, als würde er gelten.
+2. **Was verlangt euer kantonaler NAV zur Stundenkontrolle?** Möglicherweise
+   erfüllt ihr damit eine Pflicht, die ihr ohnehin habt.
+3. **Wie sind die Leute angestellt?** Bei Temporären ist der Arbeitgeber ein
+   anderer — dann erfasst ihr Daten über fremde Arbeitnehmer.
+4. **Private Geräte oder Firmengeräte?** Auf einem privaten Handy ist jede
+   dauerhafte Berechtigung eine deutlich grössere Bitte, und der Ausstiegsweg
+   muss umso belastbarer sein.
+
+## Was das für den Aufwand heisst
+
+Ehrlich gesagt: **Die native App kommt damit zurück.** Ein Zustand, der den Tag
+über mitläuft, braucht Hintergrundausführung, und die gibt es im Browser nicht.
+Was die QR-Runde eingespart hatte, kauft ihr hier wieder ein.
+
+Es wird aber eine **leichte** App: Geofence-Übergänge (betreten / verlassen)
+und Bewegungserkennung sind auf beiden Plattformen billige, ereignisgesteuerte
+Schnittstellen — sie wecken die App, statt dauernd zu laufen. Das ist um
+Grössenordnungen sparsamer als fortlaufende Ortung und erzeugt genau die
+Abschnitte, die oben gespeichert werden sollen.
+
+Der Rest aus §3 bleibt: Android per APK, iOS nur über Apple. Und die Frage
+Firmen- oder Privatgeräte bleibt die teuerste Einzelentscheidung.
+
+Ein Stolperstein zum Schluss: **Wenn jemand auf dem Hof wohnt**, fängt der
+Hof-Geofence seine Freizeit mit ein. Das braucht eine eigene Regel — etwa dass
+ausserhalb der erfassten Dienstzeit gar nichts ausgewertet wird.
