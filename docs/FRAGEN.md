@@ -1,7 +1,66 @@
 # Offene Fragen
 
 Die erste Runde ist beantwortet — siehe [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md).
-Was danach noch offen ist, und was beim Durchklicken der Demo neu aufkam.
+Was danach noch offen ist, was beim Durchklicken der Demo neu aufkam, und was
+der Ausbau zum Vollsystem aufwirft ([AUSBAU.md](AUSBAU.md)).
+
+---
+
+## Zum Ausbau — diese blockieren den Entwurf
+
+### A · Firmenhandys oder private Handys?
+
+Die teuerste Einzelentscheidung (AUSBAU §3). Private Geräte heissen: App
+installieren lassen, dauerhaften Standortzugriff erbitten, Akku-Optimierung
+abschalten, Gerät geladen halten — auf fremdem Eigentum, mit einer
+Einwilligung, die im Arbeitsverhältnis rechtlich schwach ist.
+
+Firmengeräte machen fast alles einfacher: einheitlich, Android genügt (keine
+Apple-Gebühr), Akku ist Betriebssache, rechtlich deutlich entspannter.
+
+**Hängt zusammen mit:** Wenn nicht jede Person ein Gerät trägt, kann die App
+auch nicht sehen, wer am Feld steht — dann stellt der Vorarbeiter die Gruppe
+zusammen, und die GPS-Erkennung aus AUSBAU §6 fällt weg. Die beiden Fragen
+müssen gemeinsam entschieden werden.
+
+### B · Was passiert mit der Restzeit?
+
+**Vor** dem Einschalten festlegen, nicht danach (AUSBAU §13). Wird sie nur
+über den ganzen Betrieb ausgewertet, oder je Person? Sobald jemand auf seine
+nicht zugeordnete Zeit angesprochen wird, liegen die Handys im Auto — und
+dann sind die Daten falsch, ohne dass es jemand sehen kann.
+
+*Vorschlag: nur aggregiert, nie je Person, und das den Leuten vorher sagen.*
+
+### C · Wie sind die Leute angestellt?
+
+Festangestellte, Saisonniers, Temporärbüro? Bei Temporären ist der
+Arbeitgeber ein anderer — dann erfasst ihr Daten über fremde Arbeitnehmer.
+Bestimmt ausserdem, wie oft Namen, Geräte und Einwilligungen wechseln.
+
+### D · Ist Fahrzeit bei euch bezahlte Arbeitszeit?
+
+Steht im Vertrag bzw. im kantonalen NAV, nicht in der App (AUSBAU §5). Für
+die Kostenrechnung fast egal — die Fahrt kostet so oder so. Für den Lohn
+nicht.
+
+### E · Gibt es immer einen Vorarbeiter je Gruppe?
+
+Der ganze Ablauf hängt daran, dass jemand die Gruppe ansagt und bestätigt.
+Wenn zwei Leute allein losziehen, muss es auch ohne gehen.
+
+### F · Wer kümmert sich während der Saison darum?
+
+Nachträge anschauen, neue Leute anlegen, Geräte ersetzen, Fragen beantworten.
+Der am leichtesten übersehene Posten (AUSBAU §11) — ohne ihn verrottet die
+Datenqualität in Wochen, und es fällt erst am Jahresende auf.
+
+### G · Für die Rechtsberatung
+
+Nicht von mir zu beantworten, aber die Fragen stehen fest (AUSBAU §10):
+Gilt das ArG bei euch? Was verlangt der kantonale NAV Landwirtschaft zur
+Stundenkontrolle? Und: Braucht es eine Datenschutz-Folgenabschätzung — nach
+allem, was ich sehe, ja.
 
 ---
 
